@@ -1,6 +1,9 @@
+import AddButton from '@components/Buttons/AddButton';
+import Footer from '@components/Footer';
 import Header from '@components/Header';
 import Home from '@components/Home';
-import Footer from '@components/Footer';
+import StepOne from '@components/Forms/StepOne';
+import StepTwo from '@components/Forms/StepTwo';
 
 /* Exporting the components files from the components folder. */
-export { Header, Home, Footer };
+export { AddButton, Footer, Header, Home, StepOne, StepTwo };

@@ -11,6 +11,16 @@ declare namespace CRUD {
     children: React.ReactNode;
   }
 
+  interface StepOne {
+    isShow: boolean;
+    setIsShow: (show: boolean) => void;
+  }
+
+  interface StepTwo {
+    isCompleted: boolean;
+    setIsCompleted: (show: boolean) => void;
+  }
+
   interface Svg {
     className?: string;
   }
