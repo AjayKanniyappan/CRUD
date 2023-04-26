@@ -8,7 +8,7 @@ function Footer(): JSX.Element {
   return (
     <footer className="bottom-0 px-4">
       <hr className="border-gray-300" />
-      <div className="py-6 text-md text-center">
+      <div className="py-6 text-center">
         Made with ❤️ by{' '}
         <a className="cursor-pointer" href={AUTHOR_URL} target="_blank" rel="noreferrer">
           Ajay Kanniyappan

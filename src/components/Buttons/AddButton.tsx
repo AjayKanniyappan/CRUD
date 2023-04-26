@@ -1,7 +1,15 @@
 import { useState } from 'react';
 import { AddSvg } from '@svg/index';
 import { StepOne } from '@components/index';
+import '@styles/AddButton.css';
 
+/**
+ * This is a TypeScript React component that renders a button with an icon and toggles a modal when
+ * clicked.
+ * @returns A JSX element containing a button with an onClick event that toggles the value of the
+ * isOpen state variable and an SVG icon. Additionally, a StepOne component is conditionally rendered
+ * based on the value of the isOpen state variable.
+ */
 function AddButton(): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -11,12 +19,8 @@ function AddButton(): JSX.Element {
 
   return (
     <>
-      <button
-        type="button"
-        className="fixed bottom-10 right-10 z-10 flex h-14 w-14 items-center justify-center rounded-full bg-[#1597E4] hover:bg-[#1075b1] text-white"
-        onClick={toggleModal}
-      >
-        <AddSvg className="w-9 h-9" />
+      <button type="button" className="btn" onClick={toggleModal}>
+        <AddSvg className="h-9 w-9" />
       </button>
       <StepOne isShow={isOpen} setIsShow={setIsOpen} />
     </>

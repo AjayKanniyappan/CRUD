@@ -54,7 +54,7 @@ function Card() {
           <div
             key={data.id}
             id={String(data.id)}
-            className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+            className="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow"
           >
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
               {data.jobTitle}

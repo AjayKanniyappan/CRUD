@@ -1,6 +1,21 @@
 declare namespace CRUD {
+  type FormOneData = {
+    jobTitle: string;
+    companyName: string;
+    industry: string;
+    location: string;
+    remoteType: string;
+  };
   type Headers = Readonly<Record<string, string | boolean>>;
   type Url = string;
+
+  interface FormOne {
+    callBack: (params) => void;
+  }
+
+  interface FormTwo {
+    callBack: (params, params) => void;
+  }
 
   interface PageProps {
     className?: string;
@@ -27,7 +42,7 @@ declare namespace CRUD {
   }
 
   interface StepTwo {
-    stepOneData: StepOneData;
+    stepOneData: FormOneData;
     isCompleted: boolean;
     setIsCompleted: (show: boolean) => void;
   }

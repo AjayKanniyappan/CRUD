@@ -1,0 +1,44 @@
+.btn-container {
+  @apply flex items-end justify-end pt-[90px];
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  @apply rounded-md px-5 py-2 text-center text-white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover-color) !important;
+}
+
+.form-container {
+  color: var(--font-color);
+  @apply mb-3 font-medium;
+}
+
+.error {
+  color: var(--error-color);
+  @apply absolute text-sm;
+}
+
+.error-color {
+  color: var(--error-color);
+}
+
+.input {
+  color: var(--font-color);
+  @apply w-full rounded-md py-[5px] pl-3 outline-none ring-1;
+}
+
+.input-error {
+  @apply ring-[#D86161] focus:ring-[#D86161];
+}
+
+.input-focus {
+  @apply ring-[#E6E6E6] focus:ring-[#1597E4];
+}
+
+.input::placeholder {
+  color: var(--placeholder-color);
+  font-weight: 400;
+}

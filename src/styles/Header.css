@@ -1,0 +1,15 @@
+.header {
+  @apply bottom-2 m-4 rounded-xl border-[1px] border-gray-300 shadow-md;
+}
+
+.div-container {
+  @apply mx-auto flex w-full max-w-screen-xl p-4;
+}
+
+.heading {
+  @apply mx-4 py-1 text-center font-semibold md:py-2;
+}
+
+.avatar-container {
+  @apply ml-auto rounded-full bg-gray-200 p-2 md:p-3;
+}

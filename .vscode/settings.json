@@ -9,6 +9,6 @@
     "source.fixAll.eslint": true
   },
   "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
   }
 }
