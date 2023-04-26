@@ -1,4 +1,5 @@
 declare namespace CRUD {
+  type Headers = Readonly<Record<string, string | boolean>>;
   type Url = string;
 
   interface PageProps {
@@ -16,7 +17,17 @@ declare namespace CRUD {
     setIsShow: (show: boolean) => void;
   }
 
+  interface StepOneData {
+    id?: number;
+    jobTitle: string;
+    companyName: string;
+    industry: string;
+    location: string;
+    remoteType: string;
+  }
+
   interface StepTwo {
+    stepOneData: StepOneData;
     isCompleted: boolean;
     setIsCompleted: (show: boolean) => void;
   }

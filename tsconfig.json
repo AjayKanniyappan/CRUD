@@ -21,6 +21,7 @@
       "@components/*": ["./src/components/*"],
       "@constants/*": ["./src/constants/*"],
       "@layouts/*": ["./src/layouts/*"],
+      "@services/*": ["./src/services/*"],
       "@styles/*": ["./src/styles/*"],
       "@svg/*": ["./src/svg/*"]
     }
