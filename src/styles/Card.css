@@ -1,0 +1,4 @@
+.card > .blur {
+  backdrop-filter: blur(10px);
+  opacity: 1;
+}

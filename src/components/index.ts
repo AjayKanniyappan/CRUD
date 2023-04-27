@@ -1,4 +1,5 @@
 import AddButton from '@components/buttons/AddButton';
+import Card from '@components/card/Card';
 import DeleteButton from '@components/buttons/DeleteButton';
 import EditButton from '@components/buttons/EditButton';
 import Footer from '@components/Footer';
@@ -13,6 +14,7 @@ import StepTwo from '@components/steps/StepTwo';
 /* Exporting the components files from the components folder. */
 export {
   AddButton,
+  Card,
   DeleteButton,
   EditButton,
   Footer,

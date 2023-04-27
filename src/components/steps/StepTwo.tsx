@@ -1,6 +1,9 @@
 import { FormTwo, Modal } from '@components/index';
+import jobApi from '@services/job.service';
+import { useGlobalState } from '@components/Home';
 
 function StepTwo({ stepOneData, isCompleted, setIsCompleted }: CRUD.StepTwoProps): JSX.Element {
+  const { setGlobalState } = useGlobalState();
   const Data = {
     minimumExperience: '',
     maximumExperience: '',
@@ -24,8 +27,9 @@ function StepTwo({ stepOneData, isCompleted, setIsCompleted }: CRUD.StepTwoProps
       quickApply: apply === 'quick',
       externalApply: apply !== 'quick',
     };
-    // eslint-disable-next-line no-console
-    console.log(jobData);
+    jobApi.create('job-post', jobData).then(() => {
+      setGlobalState({ message: 'pass' });
+    });
     setIsCompleted(false);
   };
 

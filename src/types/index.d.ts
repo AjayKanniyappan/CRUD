@@ -31,6 +31,16 @@ declare namespace CRUD {
   type Headers = Readonly<Record<string, string | boolean>>;
   type Url = string;
 
+  interface EditProps {
+    className?: string;
+    handleEdit: (params?) => void;
+  }
+
+  interface DeleteProps {
+    className?: string;
+    handleDelete: (params?) => void;
+  }
+
   interface FormOneProps {
     className?: string;
     data: FormOneData;
