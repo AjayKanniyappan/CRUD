@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DeleteButton() {
+function DeleteButton(): JSX.Element {
   return <div>DeleteButton</div>;
 }
 

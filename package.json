@@ -1,6 +1,32 @@
 {
   "name": "crud",
   "version": "1.0.0",
+  "description": "A Simple CRUD Application Demo Using React With Typescript!",
+  "keywords": [
+    "React",
+    "Typescript",
+    "JavaScript",
+    "Html",
+    "Css",
+    "Eslint",
+    "Prettier",
+    "tailwindcss",
+    "CRUD"
+  ],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AjayKanniyappan/CRUD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AjayKanniyappan/CRUD/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ajay Kanniyappan",
+    "email": "ajaykanniyappan@gmail.com",
+    "url": "https://ajaykanniyappan.com"
+  },
   "type": "module",
   "scripts": {
     "build": "tsc && vite build",
@@ -16,24 +42,28 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/parser": "^5.58.0",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@types/node": "^18.16.1",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.38.0",
+    "eslint": "^8.39.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.7",
-    "tailwindcss": "^3.3.1",
-    "typescript": "^4.9.3",
-    "vite": "^4.2.0",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.3",
     "vite-tsconfig-paths": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=14.6.0",
+    "npm": ">=6.x"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EditButton() {
+function EditButton(): JSX.Element {
   return <div>EditButton</div>;
 }
 
