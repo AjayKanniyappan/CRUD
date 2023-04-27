@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { formTwoValidation } from '@hooks/validations';
 import '@styles/Form.css';
 
-function FormTwo({ data, callBack }: CRUD.FormTwoProps): JSX.Element {
-  const [apply, setApply] = useState('quick');
+function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element {
+  const [apply, setApply] = useState(data.applyType);
   const [isValid, setIsValid] = useState({
     minimumExperience: true,
     maximumExperience: true,
@@ -19,7 +19,12 @@ function FormTwo({ data, callBack }: CRUD.FormTwoProps): JSX.Element {
     const checkValid = formTwoValidation(isValid, formData, setIsValid);
 
     if (Object.keys(checkValid).length === 0) {
-      callBack(formData, apply);
+      const applyType = {
+        quickApply: apply === 'quick',
+        externalApply: apply !== 'quick',
+      };
+      const Data = { ...formData, ...applyType };
+      callBack(Data, apply);
     }
   };
 
@@ -167,7 +172,7 @@ function FormTwo({ data, callBack }: CRUD.FormTwoProps): JSX.Element {
       <div className="btn-container">
         <div>
           <button type="submit" className="btn-primary">
-            Save
+            {buttonName}
           </button>
         </div>
       </div>

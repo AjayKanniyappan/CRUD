@@ -1,4 +1,4 @@
-.card > .blur {
+.card > .blurred {
   backdrop-filter: blur(10px);
   opacity: 1;
 }

@@ -16,7 +16,7 @@ class ApiClient {
     return this.client.post(path, data);
   }
 
-  delete(path: string, id: number, data: object): Promise<AxiosResponse> {
+  delete(path: string, id: number, data?: object): Promise<AxiosResponse> {
     return this.client.delete(`/${path}/${id}`, data);
   }
 

@@ -12,6 +12,7 @@ declare namespace CRUD {
     minimumSalary: string;
     maximumSalary: string;
     totalEmployee: string;
+    applyType: string;
   };
   type JobData = {
     id?: string;
@@ -33,11 +34,14 @@ declare namespace CRUD {
 
   interface EditProps {
     className?: string;
-    handleEdit: (params?) => void;
+    jobId: string;
+    jobData: JobData;
+    handleEdit: (params?, params?) => void;
   }
 
   interface DeleteProps {
     className?: string;
+    jobId: string;
     handleDelete: (params?) => void;
   }
 
@@ -49,8 +53,14 @@ declare namespace CRUD {
 
   interface FormTwoProps {
     className?: string;
+    buttonName: string;
     data: FormTwoData;
     callBack: (params, params?) => void;
+  }
+
+  interface GlobalState {
+    globalState: object;
+    setGlobalState: React.Dispatch<React.SetStateAction<object>>;
   }
 
   interface PageProps {
@@ -71,11 +81,17 @@ declare namespace CRUD {
   }
 
   interface StepOneProps {
+    className?: string;
+    height: string;
+    width: string;
     isShow: boolean;
     setIsShow: (show: boolean) => void;
   }
 
   interface StepTwoProps {
+    className?: string;
+    height: string;
+    width: string;
     stepOneData: FormOneData;
     isCompleted: boolean;
     setIsCompleted: (show: boolean) => void;

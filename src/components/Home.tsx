@@ -1,26 +1,26 @@
 import { createContext, useContext, useMemo, useState } from 'react';
 import { AddButton, Card } from '@components/index';
 
-interface GlobalState {
-  globalState: object;
-  setGlobalState: React.Dispatch<React.SetStateAction<object>>;
-}
-
-const GlobalStateContext = createContext<GlobalState>({
+const GlobalStateContext = createContext<CRUD.GlobalState>({
   globalState: {},
   setGlobalState: () => {},
 });
 
-export const useGlobalState = () => useContext(GlobalStateContext);
-
+/**
+ * The Home function returns a JSX element that provides a global state context and renders a Card
+ * component and an AddButton component.
+ * @returns The `Home` component is being returned, which contains a `GlobalStateContext.Provider`
+ * component that provides a `value` prop with the `globalState` and `setGlobalState` variables wrapped
+ * in a `useMemo` hook. The `Card` component is also being rendered within a `div` element with a class
+ * of `grid min-h-screen place-items-center`, and an `Add
+ */
 function Home(): JSX.Element {
   const [globalState, setGlobalState] = useState({});
-
-  const value = useMemo(() => ({ globalState, setGlobalState }), [globalState]);
+  const state = useMemo(() => ({ globalState, setGlobalState }), [globalState]);
 
   return (
-    <GlobalStateContext.Provider value={value}>
-      <div className="grid h-screen place-items-center">
+    <GlobalStateContext.Provider value={state}>
+      <div className="grid min-h-screen place-items-center">
         <Card />
       </div>
       <AddButton />
@@ -28,4 +28,5 @@ function Home(): JSX.Element {
   );
 }
 
+export const useGlobalState = () => useContext(GlobalStateContext);
 export default Home;

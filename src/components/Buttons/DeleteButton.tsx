@@ -1,7 +1,7 @@
 import { Modal } from '@components/index';
 import { useState } from 'react';
 
-function DeleteButton({ handleDelete }: CRUD.DeleteProps): JSX.Element {
+function DeleteButton({ jobId, handleDelete }: CRUD.DeleteProps): JSX.Element {
   const [show, setShow] = useState(false);
 
   return (
@@ -32,7 +32,7 @@ function DeleteButton({ handleDelete }: CRUD.DeleteProps): JSX.Element {
             Cancel
           </button>
           <button
-            onClick={handleDelete}
+            onClick={() => handleDelete(jobId)}
             type="button"
             className="mb-2 mr-2 rounded-lg bg-red-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300"
           >
