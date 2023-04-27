@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { formTwoValidation } from '@hooks/validations';
 import '@styles/Form.css';
 
-function FormTwo({ callBack }: CRUD.FormTwo) {
+function FormTwo({ data, callBack }: CRUD.FormTwoProps): JSX.Element {
   const [apply, setApply] = useState('quick');
   const [isValid, setIsValid] = useState({
     minimumExperience: true,
@@ -12,13 +12,7 @@ function FormTwo({ callBack }: CRUD.FormTwo) {
     maximumSalary: true,
     totalEmployee: true,
   });
-  const [formData, setFormData] = useState({
-    minimumExperience: '',
-    maximumExperience: '',
-    minimumSalary: '',
-    maximumSalary: '',
-    totalEmployee: '',
-  });
+  const [formData, setFormData] = useState(data);
 
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

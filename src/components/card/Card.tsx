@@ -1,16 +1,17 @@
-import ApiClient from '@services/ApiClient';
 import { useState, useEffect } from 'react';
+import ApiClient from '@services/ApiClient';
+import { VITE_MOCK_API_KEY } from '@constants/index';
 
 const headers: CRUD.Headers = {
   Accept: 'application/json',
   'Content-Type': 'application/json; charset=utf-8',
 };
 
-function Card() {
+function Card(): JSX.Element {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
-    const api = new ApiClient('https://643941cd4660f26eb1ae59e5.mockapi.io/', headers);
+    const api = new ApiClient(`https://${VITE_MOCK_API_KEY}.mockapi.io/`, headers);
     async function fetchData() {
       const { data, status } = await api.getAll('job-post');
       if (status === 200) {
@@ -18,38 +19,11 @@ function Card() {
       }
     }
     fetchData();
-  }, [post]);
-
-  /*   setTimeout(() => {
-    // setPost([]);
-  }, 4000); */
-
-  /* setTimeout(() => {
-    setPost(post.filter((data: CRUD.StepOneData) => data.id !== '2'));
-  }, 6000); */ // delete
-
-  /* setTimeout(() => {
-    const indexToUpdate = post.findIndex((cardData) => cardData?.id === '2');
-    if (indexToUpdate >= 0) {
-      const api = new ApiClient('https://643941cd4660f26eb1ae59e5.mockapi.io/', headers);
-
-      // eslint-disable-next-line no-inner-declarations
-      async function fetchCardData() {
-        const { data, status } = await api.get('job-post', 2);
-        if (status === 200) {
-          const updatedPost = [...post];
-          updatedPost[indexToUpdate] = data;
-          setPost(updatedPost);
-        }
-      }
-
-      fetchCardData();
-    }
-  }, 5000);//update */
+  }, []);
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      {post?.map((data: CRUD.StepOneData) => {
+      {post?.map((data: CRUD.JobData) => {
         return (
           <div
             key={data.id}

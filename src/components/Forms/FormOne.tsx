@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { formOneValidation } from '@hooks/validations';
 import '@styles/Form.css';
 
-function FormOne({ callBack }: CRUD.FormOne) {
+function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
   const [isValid, setIsValid] = useState({
     jobTitle: true,
     companyName: true,
@@ -10,13 +10,7 @@ function FormOne({ callBack }: CRUD.FormOne) {
     location: true,
     remoteType: true,
   });
-  const [formData, setFormData] = useState({
-    jobTitle: '',
-    companyName: '',
-    industry: '',
-    location: '',
-    remoteType: '',
-  });
+  const [formData, setFormData] = useState(data);
 
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
