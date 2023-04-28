@@ -1,6 +1,6 @@
 <div align="center">
   <!-- PROJECT LOGO -->
-  <a href="https://nextjs-pwa-template-repo.vercel.app">
+  <a href="https://crud-react-demo.netlify.app">
     <img src="https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png" height="150px" alt="React" />
   </a>
   <!-- PROJECT NAME -->
@@ -8,7 +8,7 @@
   <!-- PROJECT DESCRIPTION -->
   <p>A Simple CRUD Application Demo Using React With Typescript!</p>
   <!-- PROJECT URL -->
-  <h3><a href="https://nextjs-pwa-template-repo.vercel.app">🚀 Live Demo</a></h3>
+  <h3><a href="https://crud-react-demo.netlify.app">🚀 Live Demo</a></h3>
 </div> 
  
 <div align="center"> 
@@ -50,17 +50,14 @@
 - [🚢 Deploy your own](#-deploy-your-own)
   - [🔼 Vercel](#-vercel)
   - [👻 Self-Hosting](#-self-hosting)
-- [🤝 Contributing](#-contributing)
-- [💖 Show your support](#-show-your-support)
-- [☕ Donate](#-donate)
 - [🛠️ Author](#%EF%B8%8F-author)
 - [📝 License](#-license)
 
 ## 📖 About the Project
 
-**Next.js PWA template** 🐾 is a starter template that provides a comprehensive setup for building a progressive web app (PWA) using the Next.js framework. Don't worry about the configuration 🔨 this template will take care of that, focus on your codes⌨️ and project ideas💡
+**CRUD** is a starter template that provides a comprehensive setup for building a web app using the React.js and vite.js framework. Don't worry about the configuration 🔨 this template will take care of that, focus on your codes⌨️ and project ideas💡
 
-This template includes a pre-configured setup for service workers, offline support, and manifest files, making it easy for developers to create a high-performing PWA with minimal setup. The template also includes a basic layout and routing system, along with some basic components and styles, to help developers get started quickly. This template give you the **end to end type safety**. Additionally, it includes a range of popular libraries and tools, such as Prettier, ESLint, and Tailwind CSS, to ensure that the code is well-formatted and follows best practices. With the help of this template, developers can easily create a fast and reliable PWA that can work seamlessly across all devices.
+The application allows users to create, read, update, and delete data records in [mockAPI.io](https://mockapi.io/). The user interface is built using React. This template give you the **end to end type safety**. Additionally, it includes a range of popular libraries and tools, such as Prettier, ESLint, and Tailwind CSS, to ensure that the code is well-formatted and follows best practices.
 
 ## 🔍 Features
 

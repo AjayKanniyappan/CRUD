@@ -20,7 +20,7 @@ function Home(): JSX.Element {
 
   return (
     <GlobalStateContext.Provider value={state}>
-      <div className="grid min-h-screen place-items-center">
+      <div>
         <Card />
       </div>
       <AddButton />

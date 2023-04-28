@@ -9,7 +9,7 @@ function Page({ className, children }: CRUD.PageProps): JSX.Element {
   return (
     <>
       <Header />
-      <main>
+      <main className="min-h-screen">
         <article className={className}>{children}</article>
       </main>
       <Footer />
