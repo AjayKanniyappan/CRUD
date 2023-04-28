@@ -31,7 +31,7 @@
 
 .input {
   color: var(--font-color);
-  @apply w-full rounded-md py-[5px] pl-3 outline-none ring-1;
+  @apply w-full rounded-md py-[5px] pl-3 outline-none ring-2;
 }
 
 .input-error {
