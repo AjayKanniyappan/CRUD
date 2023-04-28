@@ -1,7 +1,8 @@
 import { FormOne, FormTwo, Modal } from '@components/index';
 import { useState } from 'react';
+import '@styles/EditButton.css';
 
-function EditButton({ jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element {
+function EditButton({ height, width, jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element {
   const [formTwo, setFormTwo] = useState<boolean>(false);
   const [show, setShow] = useState(false);
   const [edit, setEdit] = useState({});
@@ -38,20 +39,16 @@ function EditButton({ jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element
   return (
     <>
       <div>
-        <button
-          className="mb-2 mr-2 rounded-lg bg-sky-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-sky-800 focus:outline-none focus:ring-4 focus:ring-sky-300"
-          type="button"
-          onClick={() => setShow(true)}
-        >
+        <button className="btn-edit" type="button" onClick={() => setShow(true)}>
           Edit
         </button>
       </div>
       <Modal
         value={show}
         callBack={setShow}
-        className="w-full transform overflow-hidden rounded-lg border-[1px] border-[#E6E6E6] bg-white px-[32px] py-[32px] text-left align-middle shadow-xl transition-all md:h-[564px] md:w-[577px]"
+        className={`edit-container md:h-[${height}] md:w-[${width}]`}
       >
-        <div className="flex justify-between text-[#212121]">
+        <div className="edit-header">
           <h3 className="text-xl font-medium">Edit a job</h3>
           <h3 className="text-md font-medium">Step 1</h3>
         </div>
@@ -60,9 +57,9 @@ function EditButton({ jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element
       <Modal
         value={formTwo}
         callBack={setFormTwo}
-        className="w-full transform overflow-hidden rounded-lg border-[1px] border-[#E6E6E6] bg-white px-[32px] py-[32px] text-left align-middle shadow-xl transition-all md:h-[564px] md:w-[577px]"
+        className={`edit-container md:h-[${height}] md:w-[${width}]`}
       >
-        <div className="flex justify-between text-[#212121]">
+        <div className="edit-header">
           <h3 className="text-xl font-medium">Edit a job</h3>
           <h3 className="text-md font-medium">Step 2</h3>
         </div>

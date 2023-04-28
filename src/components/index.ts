@@ -1,5 +1,6 @@
 import AddButton from '@components/buttons/AddButton';
 import Card from '@components/card/Card';
+import CardHandler from '@components/card/CardHandler';
 import DeleteButton from '@components/buttons/DeleteButton';
 import EditButton from '@components/buttons/EditButton';
 import Footer from '@components/Footer';
@@ -15,6 +16,7 @@ import StepTwo from '@components/steps/StepTwo';
 export {
   AddButton,
   Card,
+  CardHandler,
   DeleteButton,
   EditButton,
   Footer,

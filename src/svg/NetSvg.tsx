@@ -5,13 +5,7 @@
  */
 export default function NetSvg({ className }: CRUD.Svg): JSX.Element {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="114.94727mm"
-      height="114.94727mm"
-      viewBox="0 0 407.29349 407.29348"
-      className={className}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 407.29349 407.29348" className={className}>
       <defs>
         <radialGradient
           xlinkHref="#a"

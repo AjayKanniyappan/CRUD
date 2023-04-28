@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo, useState } from 'react';
-import { AddButton, Card } from '@components/index';
+import { AddButton, CardHandler } from '@components/index';
 
 const GlobalStateContext = createContext<CRUD.GlobalState>({
   globalState: {},
@@ -21,7 +21,7 @@ function Home(): JSX.Element {
   return (
     <GlobalStateContext.Provider value={state}>
       <div>
-        <Card />
+        <CardHandler />
       </div>
       <AddButton />
     </GlobalStateContext.Provider>

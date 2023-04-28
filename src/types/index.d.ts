@@ -32,8 +32,19 @@ declare namespace CRUD {
   type Headers = Readonly<Record<string, string | boolean>>;
   type Url = string;
 
+  interface CardProps {
+    className?: string;
+    data: JobData;
+    cardId: string | number | null;
+    handleCardClick: (params?) => void;
+    editHandler: (params?, params?) => void;
+    deleteHandler: (params?) => void;
+  }
+
   interface EditProps {
     className?: string;
+    height: string;
+    width: string;
     jobId: string;
     jobData: JobData;
     handleEdit: (params?, params?) => void;

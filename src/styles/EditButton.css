@@ -1,0 +1,17 @@
+.btn-edit {
+  background-color: var(--primary-color) !important;
+  @apply mb-2 mr-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white;
+}
+
+.btn-edit:hover {
+  background-color: var(--primary-hover-color) !important;
+}
+
+.edit-container {
+  @apply w-full transform overflow-hidden rounded-lg border-[1px] bg-white px-[32px] py-[32px] text-left align-middle shadow-xl transition-all;
+}
+
+.edit-header {
+  color: var(--font-color) !important;
+  @apply flex justify-between;
+}

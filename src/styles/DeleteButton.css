@@ -1,0 +1,16 @@
+.btn-cancel {
+  @apply mb-2 mr-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 !important;
+}
+
+.btn-delete {
+  @apply mb-2 mr-2 rounded-lg bg-red-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-red-800 !important;
+}
+
+.container-header {
+  color: var(--font-color) !important;
+  @apply flex justify-center;
+}
+
+.delete-container {
+  @apply w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all;
+}
