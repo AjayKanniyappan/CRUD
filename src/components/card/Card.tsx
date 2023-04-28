@@ -46,13 +46,7 @@ function Card({
         </div>
       </div>
       <div className={`blur-container ${cardId === data.id ? 'blurred ' : '-translate-x-[500%]'}`}>
-        <EditButton
-          height="564px"
-          width="577px"
-          jobId={data.id as string}
-          jobData={data}
-          handleEdit={editHandler}
-        />
+        <EditButton jobId={data.id as string} jobData={data} handleEdit={editHandler} />
         <DeleteButton jobId={data.id as string} handleDelete={deleteHandler} />
       </div>
     </div>

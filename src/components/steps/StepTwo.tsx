@@ -3,13 +3,7 @@ import { useGlobalState } from '@components/Home';
 import jobApi from '@services/job.service';
 import '@styles/Steps.css';
 
-function StepTwo({
-  height,
-  width,
-  stepOneData,
-  isCompleted,
-  setIsCompleted,
-}: CRUD.StepTwoProps): JSX.Element {
+function StepTwo({ stepOneData, isCompleted, setIsCompleted }: CRUD.StepTwoProps): JSX.Element {
   const { setGlobalState } = useGlobalState();
   const Data = {
     minimumExperience: '',
@@ -45,7 +39,7 @@ function StepTwo({
     <Modal
       value={isCompleted}
       callBack={setIsCompleted}
-      className={`form-steps md:h-[${height}] md:w-[${width}]`}
+      className="form-steps md:h-[564px] md:w-[577px]"
     >
       <div className="steps-header">
         <h3 className="text-xl font-medium">Create a job</h3>

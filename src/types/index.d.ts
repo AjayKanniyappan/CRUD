@@ -43,8 +43,6 @@ declare namespace CRUD {
 
   interface EditProps {
     className?: string;
-    height: string;
-    width: string;
     jobId: string;
     jobData: JobData;
     handleEdit: (params?, params?) => void;
@@ -93,16 +91,12 @@ declare namespace CRUD {
 
   interface StepOneProps {
     className?: string;
-    height: string;
-    width: string;
     isShow: boolean;
     setIsShow: (show: boolean) => void;
   }
 
   interface StepTwoProps {
     className?: string;
-    height: string;
-    width: string;
     stepOneData: FormOneData;
     isCompleted: boolean;
     setIsCompleted: (show: boolean) => void;

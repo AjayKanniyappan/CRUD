@@ -2,7 +2,7 @@ import { FormOne, FormTwo, Modal } from '@components/index';
 import { useState } from 'react';
 import '@styles/EditButton.css';
 
-function EditButton({ height, width, jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element {
+function EditButton({ jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element {
   const [formTwo, setFormTwo] = useState<boolean>(false);
   const [show, setShow] = useState(false);
   const [edit, setEdit] = useState({});
@@ -43,11 +43,7 @@ function EditButton({ height, width, jobId, jobData, handleEdit }: CRUD.EditProp
           Edit
         </button>
       </div>
-      <Modal
-        value={show}
-        callBack={setShow}
-        className={`edit-container md:h-[${height}] md:w-[${width}]`}
-      >
+      <Modal value={show} callBack={setShow} className="edit-container md:h-[564px] md:w-[577px]">
         <div className="edit-header">
           <h3 className="text-xl font-medium">Edit a job</h3>
           <h3 className="text-md font-medium">Step 1</h3>
@@ -57,7 +53,7 @@ function EditButton({ height, width, jobId, jobData, handleEdit }: CRUD.EditProp
       <Modal
         value={formTwo}
         callBack={setFormTwo}
-        className={`edit-container md:h-[${height}] md:w-[${width}]`}
+        className="edit-container md:h-[564px] md:w-[577px]"
       >
         <div className="edit-header">
           <h3 className="text-xl font-medium">Edit a job</h3>
