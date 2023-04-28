@@ -41,11 +41,11 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
 
   return (
     <form className="form-container" onSubmit={(e) => handleOnSubmit(e)}>
-      <div className="py-[24px]">
+      <div className="pt-6">
         <label htmlFor="experience">
           Experience<span className="error-color">*</span>
-          <div className="flex space-x-5 pt-[4px]">
-            <div>
+          <div className="flex space-x-6 pt-1">
+            <div className="w-full">
               <input
                 type="text"
                 name="minimumExperience"
@@ -59,7 +59,7 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
                 Please fill out this field
               </div>
             </div>
-            <div>
+            <div className="w-full">
               <input
                 type="text"
                 name="maximumExperience"
@@ -76,11 +76,11 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
           </div>
         </label>
       </div>
-      <div className="py-[24px]">
+      <div className="py-6">
         <label htmlFor="salary">
           Salary<span className="error-color">*</span>
-          <div className="flex space-x-5 pt-[4px]">
-            <div>
+          <div className="flex space-x-6 pt-1">
+            <div className="w-full">
               <input
                 type="text"
                 name="minimumSalary"
@@ -94,7 +94,7 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
                 Please fill out this field
               </div>
             </div>
-            <div>
+            <div className="w-full">
               <input
                 type="text"
                 name="maximumSalary"
@@ -111,10 +111,10 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
           </div>
         </label>
       </div>
-      <div className="pb-[24px]">
+      <div className="pb-6">
         <label htmlFor="totalEmployee">
-          Total Employee<span className="text-[#d86161]">*</span>
-          <div className="pt-[4px]">
+          Total Employee<span className="error-color">*</span>
+          <div className="pt-1">
             <input
               type="number"
               name="totalEmployee"
@@ -130,23 +130,20 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
           </div>
         </label>
       </div>
-      <div className="pb-[24px]">
+      <div className="pb-6">
         <label htmlFor="applyType">
-          Apply Type
-          <div className="flex space-x-5 pt-[4px]">
+          Apply type
+          <div className="flex space-x-4 pt-1">
             <div className="flex items-center">
               <input
                 checked={apply === 'quick'}
                 onChange={() => setApply('quick')}
-                type="checkbox"
+                type="radio"
                 id="quickApply"
                 name="quickApply"
-                className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+                className="input-radio"
               />
-              <label
-                htmlFor="quickApply"
-                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
+              <label htmlFor="quickApply" className="radio-label">
                 Quick apply
               </label>
             </div>
@@ -156,20 +153,17 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
                 onChange={() => setApply('external')}
                 id="externalApply"
                 name="externalApply"
-                type="checkbox"
-                className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+                type="radio"
+                className="input-radio"
               />
-              <label
-                htmlFor="externalApply"
-                className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-              >
+              <label htmlFor="externalApply" className="radio-label">
                 External apply
               </label>
             </div>
           </div>
         </label>
       </div>
-      <div className="btn-container">
+      <div className="form-two-btnContainer">
         <div>
           <button type="submit" className="btn-primary">
             {buttonName}

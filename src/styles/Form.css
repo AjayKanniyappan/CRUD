@@ -16,6 +16,10 @@
   @apply mb-3 font-medium;
 }
 
+.form-two-btnContainer {
+  @apply flex items-end justify-end pt-[72px];
+}
+
 .error {
   color: var(--error-color);
   @apply absolute text-sm;
@@ -41,4 +45,14 @@
 .input::placeholder {
   color: var(--placeholder-color);
   font-weight: 400;
+}
+
+.input-radio {
+  color: var(--primary-color);
+  @apply h-4 w-4 border-gray-100 bg-gray-100;
+}
+
+.radio-label {
+  color: var(--placeholder-color);
+  @apply ml-1 text-base font-normal;
 }

@@ -34,10 +34,10 @@ function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
 
   return (
     <form className="form-container" onSubmit={(e) => handleOnSubmit(e)}>
-      <div className="py-[24px]">
+      <div className="py-6">
         <label htmlFor="jobTitle">
           Job title<span className="error-color">*</span>
-          <div className="pt-[4px]">
+          <div className="pt-1">
             <input
               type="text"
               name="jobTitle"
@@ -53,10 +53,10 @@ function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
           </div>
         </label>
       </div>
-      <div className="pb-[24px]">
+      <div className="pb-6">
         <label htmlFor="companyName">
           Company name<span className="error-color">*</span>
-          <div className="pt-[4px]">
+          <div className="pt-1">
             <input
               type="text"
               name="companyName"
@@ -72,10 +72,10 @@ function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
           </div>
         </label>
       </div>
-      <div className="pb-[24px]">
+      <div className="pb-6">
         <label htmlFor="industry">
           Industry<span className="error-color">*</span>
-          <div className="pt-[4px]">
+          <div className="pt-1">
             <input
               type="text"
               name="industry"
@@ -91,11 +91,11 @@ function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
           </div>
         </label>
       </div>
-      <div className="flex">
+      <div className="flex space-x-6">
         <div className="w-full">
-          <label htmlFor="location" className="pb-[4px]">
+          <label htmlFor="location" className="pb-1">
             Location
-            <div className="pt-[4px]">
+            <div className="pt-1">
               <input
                 type="text"
                 name="location"
@@ -111,10 +111,10 @@ function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
             </div>
           </label>
         </div>
-        <div className="w-full pl-[24px]">
-          <label htmlFor="remoteType" className="pb-[24px]">
+        <div className="w-full">
+          <label htmlFor="remoteType" className="pb-6">
             Remote type
-            <div className="pt-[4px]">
+            <div className="pt-1">
               <input
                 type="text"
                 name="remoteType"

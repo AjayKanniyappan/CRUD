@@ -1,4 +1,37 @@
-.card > .blurred {
+.blur-container {
+  @apply absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200;
+}
+
+.btn-apply {
+  background-color: var(--primary-color) !important;
+  @apply mb-2 mr-2 rounded-md px-4 py-2.5 text-sm font-medium text-white;
+}
+
+.btn-apply:hover {
+  background-color: var(--primary-hover-color) !important;
+}
+
+.btn-apply-outline {
+  border-color: var(--primary-color) !important;
+  border-width: 2px;
+  color: var(--primary-color);
+  @apply mb-2 mr-2 rounded-md border px-4 py-2.5 text-center text-sm
+    font-medium;
+}
+
+.btn-apply-outline:hover {
+  background-color: #fefefe !important;
+}
+
+.job-card {
+  @apply relative w-full rounded-lg border border-gray-200 bg-white px-6 py-4 shadow-lg;
+}
+
+.job-card > .blurred {
   backdrop-filter: blur(10px);
   opacity: 1;
+}
+
+.job-text {
+  @apply pt-2 font-normal;
 }
