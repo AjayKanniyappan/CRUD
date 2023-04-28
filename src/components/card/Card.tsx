@@ -8,7 +8,7 @@ function Card(): JSX.Element {
   const { globalState, setGlobalState } = useGlobalState();
   const [post, setPost] = useState([]);
   const [clickedCardId, setClickedCardId] = useState<string | null>(null);
-  const cardRef = useRef(null);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   const handleCardClick = (id: string) => {
     setClickedCardId(id);
@@ -43,7 +43,6 @@ function Card(): JSX.Element {
     fetchData();
   }, [globalState]);
 
-  console.log(clickedCardId);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (cardRef.current && !cardRef.current.contains(event.target as Node)) {
@@ -80,12 +79,7 @@ function Card(): JSX.Element {
             }`}
             aria-hidden="true"
           >
-            <EditButton
-              setClick={setClickedCardId}
-              jobId={data.id as string}
-              jobData={data}
-              handleEdit={test}
-            />
+            <EditButton jobId={data.id as string} jobData={data} handleEdit={test} />
             <DeleteButton jobId={data.id as string} handleDelete={hDelete} />
           </div>
           {/*    )} */}

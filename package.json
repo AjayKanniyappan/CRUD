@@ -33,6 +33,7 @@
     "clean": "git clean -dfX",
     "dev": "vite --port 5050",
     "lint": "eslint --fix --max-warnings 0 .",
+    "prepare": "husky install",
     "start": "npm run build && vite preview --port 5050"
   },
   "dependencies": {
