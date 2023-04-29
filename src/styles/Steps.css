@@ -1,9 +1,0 @@
-.form-steps {
-  border-color: var(--card-border-color);
-  @apply w-full transform overflow-hidden rounded-lg border-[1px] bg-white px-[32px] py-[32px] text-left align-middle shadow-xl transition-all;
-}
-
-.steps-header {
-  color: var(--font-color);
-  @apply flex justify-between;
-}

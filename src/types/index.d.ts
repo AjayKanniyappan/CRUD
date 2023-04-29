@@ -56,12 +56,14 @@ declare namespace CRUD {
 
   interface FormOneProps {
     className?: string;
+    formHeader: string;
     data: FormOneData;
     callBack: (params, params?) => void;
   }
 
   interface FormTwoProps {
     className?: string;
+    formHeader: string;
     buttonName: string;
     data: FormTwoData;
     callBack: (params, params?) => void;
@@ -97,6 +99,7 @@ declare namespace CRUD {
 
   interface StepTwoProps {
     className?: string;
+    formHeader: string;
     stepOneData: FormOneData;
     isCompleted: boolean;
     setIsCompleted: (show: boolean) => void;

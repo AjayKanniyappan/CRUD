@@ -43,23 +43,16 @@ function EditButton({ jobId, jobData, handleEdit }: CRUD.EditProps): JSX.Element
           Edit
         </button>
       </div>
-      <Modal value={show} callBack={setShow} className="edit-container md:h-[564px] md:w-[577px]">
-        <div className="edit-header">
-          <h3 className="text-xl font-medium">Edit a job</h3>
-          <h3 className="text-md font-medium">Step 1</h3>
-        </div>
-        <FormOne data={formData} callBack={handleForm} />
+      <Modal value={show} callBack={setShow} className="md:h-[564px] md:w-[577px]">
+        <FormOne formHeader="Edit a job" data={formData} callBack={handleForm} />
       </Modal>
-      <Modal
-        value={formTwo}
-        callBack={setFormTwo}
-        className="edit-container md:h-[564px] md:w-[577px]"
-      >
-        <div className="edit-header">
-          <h3 className="text-xl font-medium">Edit a job</h3>
-          <h3 className="text-md font-medium">Step 2</h3>
-        </div>
-        <FormTwo buttonName="Edit" data={formTwoData} callBack={handleCallBack} />
+      <Modal value={formTwo} callBack={setFormTwo} className="md:h-[564px] md:w-[577px]">
+        <FormTwo
+          formHeader="Edit a job"
+          buttonName="Edit"
+          data={formTwoData}
+          callBack={handleCallBack}
+        />
       </Modal>
     </>
   );

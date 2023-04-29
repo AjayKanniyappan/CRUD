@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FormOne, Modal, StepTwo } from '@components/index';
-import '@styles/Steps.css';
 
 function StepOne({ isShow, setIsShow }: CRUD.StepOneProps): JSX.Element {
   const [stepTwo, setStepTwo] = useState<boolean>(false);
@@ -21,14 +20,11 @@ function StepOne({ isShow, setIsShow }: CRUD.StepOneProps): JSX.Element {
 
   return (
     <>
-      <Modal value={isShow} callBack={setIsShow} className="form-steps md:h-[564px] md:w-[577px]">
-        <div className="steps-header">
-          <h3 className="text-xl font-medium">Create a job</h3>
-          <h3 className="text-base font-medium">Step 1</h3>
-        </div>
-        <FormOne data={formData} callBack={handleForm} />
+      <Modal value={isShow} callBack={setIsShow} className="md:h-[564px] md:w-[577px]">
+        <FormOne formHeader="Create a job" data={formData} callBack={handleForm} />
       </Modal>
       <StepTwo
+        formHeader="Create a job"
         stepOneData={values as CRUD.FormOneData}
         isCompleted={stepTwo}
         setIsCompleted={setStepTwo}

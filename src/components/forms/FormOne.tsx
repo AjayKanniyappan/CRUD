@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { formOneValidation } from '@hooks/validations';
 import '@styles/Form.css';
 
-function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
+function FormOne({ formHeader, data, callBack }: CRUD.FormOneProps): JSX.Element {
   const [isValid, setIsValid] = useState({
     jobTitle: true,
     companyName: true,
@@ -34,6 +34,10 @@ function FormOne({ data, callBack }: CRUD.FormOneProps): JSX.Element {
 
   return (
     <form className="form-container" onSubmit={(e) => handleOnSubmit(e)}>
+      <div className="form-header">
+        <h3 className="text-xl font-medium">{formHeader}</h3>
+        <h3 className="text-base font-medium">Step 1</h3>
+      </div>
       <div className="py-6">
         <label htmlFor="jobTitle">
           Job title<span className="error-color">*</span>

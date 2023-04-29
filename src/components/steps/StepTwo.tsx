@@ -1,9 +1,13 @@
 import { FormTwo, Modal } from '@components/index';
 import { useGlobalState } from '@components/Home';
 import jobApi from '@services/job.service';
-import '@styles/Steps.css';
 
-function StepTwo({ stepOneData, isCompleted, setIsCompleted }: CRUD.StepTwoProps): JSX.Element {
+function StepTwo({
+  formHeader,
+  stepOneData,
+  isCompleted,
+  setIsCompleted,
+}: CRUD.StepTwoProps): JSX.Element {
   const { setGlobalState } = useGlobalState();
   const Data = {
     minimumExperience: '',
@@ -36,16 +40,8 @@ function StepTwo({ stepOneData, isCompleted, setIsCompleted }: CRUD.StepTwoProps
   };
 
   return (
-    <Modal
-      value={isCompleted}
-      callBack={setIsCompleted}
-      className="form-steps md:h-[564px] md:w-[577px]"
-    >
-      <div className="steps-header">
-        <h3 className="text-xl font-medium">Create a job</h3>
-        <h3 className="text-base font-medium">Step 2</h3>
-      </div>
-      <FormTwo buttonName="save" data={Data} callBack={handleCallBack} />
+    <Modal value={isCompleted} callBack={setIsCompleted} className="md:h-[564px] md:w-[577px]">
+      <FormTwo formHeader={formHeader} buttonName="save" data={Data} callBack={handleCallBack} />
     </Modal>
   );
 }

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { formTwoValidation } from '@hooks/validations';
 import '@styles/Form.css';
 
-function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element {
+function FormTwo({ formHeader, buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element {
   const [apply, setApply] = useState(data.applyType);
   const [isValid, setIsValid] = useState({
     minimumExperience: true,
@@ -41,6 +41,10 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
 
   return (
     <form className="form-container" onSubmit={(e) => handleOnSubmit(e)}>
+      <div className="form-header">
+        <h3 className="text-xl font-medium">{formHeader}</h3>
+        <h3 className="text-base font-medium">Step 2</h3>
+      </div>
       <div className="pt-6">
         <label htmlFor="experience">
           Experience<span className="error-color">*</span>
@@ -163,7 +167,7 @@ function FormTwo({ buttonName, data, callBack }: CRUD.FormTwoProps): JSX.Element
           </div>
         </label>
       </div>
-      <div className="form-two-btnContainer">
+      <div className="btn-container">
         <div>
           <button type="submit" className="btn-primary">
             {buttonName}
