@@ -30,18 +30,16 @@ function Card({
           <p className="job-text">{`INR (₹) ${data.minimumSalary} - ${data.maximumSalary} / Month`}</p>
           <p className="job-text">{`${data.totalEmployee} employees`}</p>
           <div className="mt-6 flex space-x-3">
-            <button
-              className={data.quickApply === true ? 'btn-apply' : 'btn-apply-outline'}
-              type="button"
-            >
-              Apply Now
-            </button>
-            <button
-              className={data.externalApply === true ? 'btn-apply' : 'btn-apply-outline'}
-              type="button"
-            >
-              External Apply
-            </button>
+            {data.quickApply && (
+              <button className="btn-apply" type="button">
+                Apply Now
+              </button>
+            )}
+            {data.externalApply && (
+              <button className="btn-apply-outline" type="button">
+                External Apply
+              </button>
+            )}
           </div>
         </div>
       </div>

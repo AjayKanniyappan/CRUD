@@ -15,7 +15,7 @@ function StepTwo({
     minimumSalary: '',
     maximumSalary: '',
     totalEmployee: '',
-    applyType: 'quick',
+    applyType: '',
   };
 
   const handleCallBack = (formData: CRUD.FormTwoData, apply: string) => {
