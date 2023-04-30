@@ -22,7 +22,7 @@ function AddButton(): JSX.Element {
       <button type="button" className="btn" onClick={toggleModal}>
         <AddSvg className="h-9 w-9" />
       </button>
-      <StepOne isShow={isOpen} setIsShow={setIsOpen} />
+      <StepOne className="md:h-[564px] md:w-[577px]" isShow={isOpen} setIsShow={setIsOpen} />
     </>
   );
 }

@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { Card } from '@components/index';
 import { useGlobalState } from '@components/Home';
+import { SpinnerSvg } from '@svg/index';
 import jobApi from '@services/job.service';
 import '@styles/Card.css';
 
 function CardHandler(): JSX.Element {
   const { globalState } = useGlobalState();
+  const [loader, setLoader] = useState(true);
   const [jobPost, setJobPost] = useState([]);
   const [clickedCardId, setClickedCardId] = useState<string | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -44,6 +46,7 @@ function CardHandler(): JSX.Element {
       const { data, status } = await jobApi.getAll('job-post');
       if (status === 200) {
         setJobPost(data);
+        setLoader(false);
       }
     }
     fetchData();
@@ -55,20 +58,23 @@ function CardHandler(): JSX.Element {
   }, [globalState]);
 
   return (
-    <div
-      className="grid grid-cols-1 place-items-center gap-4 px-10 py-10 sm:grid-cols-2"
-      ref={cardRef}
-    >
-      {jobPost.map((values: CRUD.JobData) => (
-        <Card
-          key={values.id}
-          data={values}
-          cardId={clickedCardId}
-          editHandler={editHandler}
-          handleCardClick={handleCardClick}
-          deleteHandler={deleteHandler}
-        />
-      ))}
+    <div className="job-container" ref={cardRef}>
+      {loader ? (
+        <div className="spinner-container">
+          <SpinnerSvg className="spinner" />
+        </div>
+      ) : (
+        jobPost.map((values: CRUD.JobData) => (
+          <Card
+            key={values.id}
+            data={values}
+            cardId={clickedCardId}
+            editHandler={editHandler}
+            handleCardClick={handleCardClick}
+            deleteHandler={deleteHandler}
+          />
+        ))
+      )}
     </div>
   );
 }

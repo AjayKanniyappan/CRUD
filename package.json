@@ -13,7 +13,7 @@
     "tailwindcss",
     "CRUD"
   ],
-  "homepage": "",
+  "homepage": "https://crud-react-demo.netlify.app",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AjayKanniyappan/CRUD.git"

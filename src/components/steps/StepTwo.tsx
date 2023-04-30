@@ -3,6 +3,7 @@ import { useGlobalState } from '@components/Home';
 import jobApi from '@services/job.service';
 
 function StepTwo({
+  className,
   formHeader,
   stepOneData,
   isCompleted,
@@ -40,7 +41,7 @@ function StepTwo({
   };
 
   return (
-    <Modal value={isCompleted} callBack={setIsCompleted} className="md:h-[564px] md:w-[577px]">
+    <Modal value={isCompleted} callBack={setIsCompleted} className={className}>
       <FormTwo formHeader={formHeader} buttonName="save" data={Data} callBack={handleCallBack} />
     </Modal>
   );
